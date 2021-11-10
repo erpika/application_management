@@ -1,0 +1,228 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "S.#####",
+ "creation": "2021-10-05 15:02:21.315741",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details_section",
+  "roll_no",
+  "branch",
+  "student_name",
+  "email",
+  "application_section",
+  "application_text",
+  "attachment",
+  "status",
+  "amended_from",
+  "route"
+ ],
+ "fields": [
+  {
+   "fieldname": "roll_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Roll No",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Branch",
+   "options": "CE\nME\nPE\nCSE\nIT\nECE\nEE\nMCA\nMBA",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_text",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Application Text",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Student Form",
+   "permlevel": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "E-mail",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "application_section",
+   "fieldtype": "Section Break",
+   "label": "Application",
+   "read_only": 1
+  },
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "default": "Submitted",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status",
+   "permlevel": 1,
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-11-03 12:40:23.214329",
+ "modified_by": "Administrator",
+ "module": "Application Management",
+ "name": "Student Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 2,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  },
+  {
+   "read": 1,
+   "role": "Faculty",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Faculty",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "HOD",
+   "set_user_permissions": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HOD",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dean",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dean",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "share": 1
+  }
+ ],
+ "route": "sapp",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

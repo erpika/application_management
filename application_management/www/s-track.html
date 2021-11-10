@@ -1,0 +1,41 @@
+{%  extends "templates/web.html" %}
+
+{% block page_content %}
+
+{% if uid=='Guest' or uid=='' %}
+        <p>You cann't see this page without login</p>
+{% else %}
+<a href="/s-form">Submit Application</a>
+<h1>View Applications Status {{uid}}</h1>
+<table border="1">
+<tr>
+	<th>Application No</th>
+	<th>Name</th>
+	<th>Roll No</th>
+	<th>Branch</th>
+	<th>E-Mail</th>
+	<th>Application Text</th>
+	<th>Current Status</th>
+	<!--<th>Faculty Comments If Any</th>
+	<th>HOD Comments If Any</th>
+	<th>Dean Comments If Any</th>-->
+</tr>
+{% for app in apps %}
+	<tr>
+      <td>{{app.name}}</td>
+      <td>{{app.student_name}}</td>
+      <td>{{app.roll_no}}</td>
+      <td>{{app.branch}}</td>
+      <td>{{app.email}}</td>
+      <td>{{app.application_text}}</td>
+      <td>{{app.status}}</td>
+      <!--<td>{{app.faculty_comments}}</td>
+      <td>{{app.hod_comments}}</td>
+      <td>{{app.dean_comments}}</td>-->
+      </tr>
+{% endfor %}
+</table>
+
+{% endif %}
+
+{% endblock %}

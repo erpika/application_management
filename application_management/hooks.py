@@ -9,6 +9,9 @@ app_color = "grey"
 app_email = "misoff2019@gmail.com"
 app_license = "GNDEC"
 
+update_website_context = [  'application_management.www.s-track.applications' ]
+
+
 # Includes in <head>
 # ------------------
 
@@ -40,12 +43,12 @@ app_license = "GNDEC"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+#home_page = "login"
 
 # website user home page (by Role)
-# role_home_page = {
+#role_home_page = {
 #	"Role": "home_page"
-# }
+#}
 
 # Generators
 # ----------

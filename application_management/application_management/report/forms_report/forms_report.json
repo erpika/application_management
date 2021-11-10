@@ -1,0 +1,42 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2021-10-06 15:48:16.467930",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-10-08 16:06:03.685338",
+ "modified_by": "Administrator",
+ "module": "Application Management",
+ "name": "Forms Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n  `tabStudent Form`.student_name as \"Student Name\",\n  `tabStudent Form`.roll_no as \"Roll No\",\n  `tabStudent Form`.branch as \"Branch\",\n  `tabStudent Form`.application_text as \"Application\",\n  `tabStudent Form`.attachment as \"Attachment\",\n  fc.faculty_comments as \"Faculty Comments\",\n  `tabHOD Comments`.hod_comments as \"HOD Comments\",\n  `tabHOD Comments`.forward_to_dean as \"Forwarded to Dean\",\n  `tabHOD Comments`.status as \"Status by HOD\",\n  `tabDean Comments`.dean_comments as \"Dean Comments\",\n  `tabDean Comments`.status as \"Status by Dean\"\nFROM\n  `tabStudent Form` INNER JOIN `tabFaculty Comments` ON `tabStudent Form`.name=`tabFaculty Comments`.student_application, `tabFaculty Comments` fc, `tabHOD Comments`, `tabDean Comments`\nWHERE\n  `tabStudent Form`.docstatus=1 and `tabFaculty Comments`.docstatus=1 and `tabHOD Comments`.docstatus=1 and `tabDean Comments`.docstatus=1;",
+ "ref_doctype": "Student Form",
+ "report_name": "Forms Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Faculty"
+  },
+  {
+   "role": "HOD"
+  },
+  {
+   "role": "Dean"
+  },
+  {
+   "role": "Principal"
+  },
+  {
+   "role": "Student"
+  }
+ ]
+}
