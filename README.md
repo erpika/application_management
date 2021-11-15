@@ -7,6 +7,8 @@ If you already have bench installed then you can run the following command in yo
 
 `bench get-app app-name https://github.com/erpika/application_management`
 
+If you don't have bench already in place then follow the [Guide](https://frappeframework.com/docs/user/en/installation)
+
 #### License
 
 GNDEC
